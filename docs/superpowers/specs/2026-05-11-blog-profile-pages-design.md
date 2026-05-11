@@ -1,7 +1,7 @@
 # Blog Profile Pages Design
 
 - **Date:** 2026-05-11
-- **Status:** Draft — pending review
+- **Status:** Approved — pending implementation
 - **Branch:** `feature/profile-pages`
 - **Reviews incorporated:** `2026-05-11-blog-profile-pages-design-review.md` (Codex)
 
