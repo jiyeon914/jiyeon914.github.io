@@ -7,7 +7,7 @@ search: false
 
 // Variable overrides for the theme. Must come BEFORE the imports because
 // the theme declares variables with `!default`.
-$max-width: 2300px;      // ~1.8x of theme default 1280px — wider content column
+$max-width: 1440px;      // wider than theme default 1280px but kept within reading-friendly conventional range
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
