@@ -11,7 +11,7 @@
 
 ## 출처 자료
 
-- 학술 CV: `D:\Personal\01_커리어\경력 이직\2026 상반기 삼성전자 DX부문\지원서\CV_Jiyeon Kim.pdf` (2025-08 기준, 3 페이지). 본 spec에 공개 가능한 항목을 전사함 — 원본 PDF가 구현 환경에서 접근 불가해도 spec 자체로 self-contained.
+- 학술 CV (2025-08 기준, 3 페이지 PDF, 로컬 보관). 본 spec에 공개 가능한 항목을 전사함 — 원본 PDF가 구현 환경에서 접근 불가해도 spec 자체로 self-contained.
 - LinkedIn 프로필 URL: `https://www.linkedin.com/in/jiyeon-kim-b4ba19314/`
 - LinkedIn 현 직장 정보 (수동 제공): "Professional AI Scientist, LG CNS, Full-time, Jul 2025 – Present, Seoul · On-site, Project: Data Center Cooling Control AI Agent (Ongoing)"
 
