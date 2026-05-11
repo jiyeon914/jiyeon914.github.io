@@ -110,7 +110,7 @@ analytics:
 author:
   name             : "Jiyeon Kim"
   avatar           : "/assets/images/avatar.svg"
-  bio              : "AI Scientist at LG CNS · PhD in Fluid Mechanics · Bridging CFD and deep learning"
+  bio              : "AI Scientist at LG CNS · Ph.D. in Fluid Mechanics · Bridging CFD and deep learning"
   location         : "Seoul, Republic of Korea"
   email            : # "jykim3994@gmail.com" 아래 link랑 같이 노출되어서 생략
   links:
