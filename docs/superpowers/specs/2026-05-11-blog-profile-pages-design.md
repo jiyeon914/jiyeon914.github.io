@@ -21,7 +21,7 @@
 
 이 repo는 Minimal Mistakes 테마 소스 클론에 기반해서 `docs/` 디렉터리에 테마 자체 문서 사이트(`docs/_config.yml`, `docs/_pages/`, `docs/_data/navigation.yml` 등)가 그대로 남아있다. **`docs/` 하위는 이번 구현 대상이 아니다.**
 
-현재 root `_config.yml`의 `exclude:` 리스트에 `docs`가 빠져있어, 빌드 시 `docs/_pages/about.md`(permalink `/about/`)가 root와 충돌할 위험이 있다. 이번 작업에서 **`docs`를 exclude에 추가**한다 (수정할 파일 표 참조).
+root `_config.yml`의 `exclude:` 리스트에 이미 `- /docs # ignore Minimal Mistakes /docs`가 등록되어 있어 (line 185), `docs/_pages/about.md` 등은 빌드에서 제외된다. 이번 작업에서 추가 exclude 변경은 필요 없다.
 
 ## 합의된 결정 사항
 
@@ -146,7 +146,7 @@
 
 | 파일 | 변경 |
 |---|---|
-| `_config.yml` | (1) `subtitle` → `"A Belated Journal of Dr. Kim"` ("Prospective" 제거). (2) `author:` 블록 정리 — `name`(Jiyeon Kim 유지), `bio` 한 줄 갱신, `avatar: "/assets/images/avatar.svg"`, `location: "Seoul, Republic of Korea"` 유지, `email` 주석 유지, `links`는 **Email / GitHub / LinkedIn / ORCID 4개만 남김** (Website/Twitter/Facebook/Instagram 항목 삭제 — Instagram은 사용자 합의로 제외). (3) `footer.links`도 동일 정책 적용 — GitHub/LinkedIn/ORCID 정도만 남기고 Twitter/Facebook/GitLab/Bitbucket placeholder 삭제. (4) `social.name: "Jiyeon Kim"` 채움, `social.links`에 공개 프로필 URL(GitHub/LinkedIn/ORCID) 등록 — SEO structured data 일관성. (5) `analytics.google.anonymize_ip: flase` → `false` 오타 수정. (6) `exclude:` 리스트에 `docs` 추가 (테마 자체 문서 사이트가 root 빌드에 섞이지 않게). (7) `defaults:` 블록에 `_pages` 스코프 추가 — `layout: single` + `author_profile: true` 기본값. |
+| `_config.yml` | (1) `subtitle` → `"A Belated Journal of Dr. Kim"` ("Prospective" 제거). (2) `author:` 블록 정리 — `name`(Jiyeon Kim 유지), `bio` 한 줄 갱신, `avatar: "/assets/images/avatar.svg"`, `location: "Seoul, Republic of Korea"` 유지, `email` 주석 유지, `links`는 **Email / GitHub / LinkedIn / ORCID 4개만 남김** (Website/Twitter/Facebook/Instagram 항목 삭제 — Instagram은 사용자 합의로 제외). (3) `footer.links`도 동일 정책 적용 — GitHub/LinkedIn/ORCID 정도만 남기고 Twitter/Facebook/GitLab/Bitbucket placeholder 삭제. (4) `social.name: "Jiyeon Kim"` 채움, `social.links`에 공개 프로필 URL(GitHub/LinkedIn/ORCID) 등록 — SEO structured data 일관성. (5) `analytics.google.anonymize_ip: flase` → `false` 오타 수정. (6) `defaults:` 블록에 `_pages` 스코프 추가 — `layout: single` + `author_profile: true` 기본값. (`exclude:`에 `/docs`는 이미 등록되어 있어 별도 변경 없음.) |
 | `_data/navigation.yml` | placeholder "Quick-Start Guide" 제거, 5탭 등록: `About → /about/`, `Experience → /experience/`, `Research → /research/`, `Publications → /publications/`, `Posts → /` |
 
 ### 건드리지 않을 것
