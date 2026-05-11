@@ -5,5 +5,79 @@ search: false
 
 @charset "utf-8";
 
+// Variable overrides for the theme. Must come BEFORE the imports because
+// the theme declares variables with `!default`.
+$max-width: 1600px;      // wider than theme default 1280px but still in the conventional range
+
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
+
+// Body font-size override. The theme's _reset.scss hardcodes `html { font-size: 16px; }`
+// (with 18/20/22 at the medium/large/x-large breakpoints) and does not consume
+// `$doc-font-size`, so a variable override would have no effect. We rewrite the
+// cascade here at ~80% of the theme defaults for denser body text.
+html {
+  font-size: 13px;
+  @include breakpoint($medium)  { font-size: 14px; }
+  @include breakpoint($large)   { font-size: 16px; }
+  @include breakpoint($x-large) { font-size: 18px; }
+}
+
+// Masthead title scaled up vs. the rest of the masthead text — site titles
+// are commonly larger than body navigation in conventional themes.
+.site-title {
+  font-size: 1.5em;
+}
+
+// Vertical timeline used by the Experience page.
+.timeline {
+  position: relative;
+  margin: 1.5em 0;
+  padding-left: 1.75em;
+  border-left: 2px solid mix($primary-color, $background-color, 60%);
+}
+
+.timeline-entry {
+  position: relative;
+  margin-bottom: 1.75em;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: -2.05em;
+    top: 0.35em;
+    width: 0.65em;
+    height: 0.65em;
+    background-color: $primary-color;
+    border-radius: 50%;
+  }
+}
+
+.timeline-date {
+  display: block;
+  font-size: $type-size-6;
+  font-weight: bold;
+  color: $muted-text-color;
+  margin-bottom: 0.15em;
+}
+
+.timeline-title {
+  font-size: $type-size-5;
+  font-weight: bold;
+  margin: 0 0 0.1em 0;
+}
+
+.timeline-org {
+  font-size: $type-size-6;
+  color: $muted-text-color;
+  margin: 0 0 0.4em 0;
+}
+
+.timeline-body {
+  font-size: $type-size-6;
+  margin: 0;
+}
